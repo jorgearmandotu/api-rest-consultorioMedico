@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const postRoute = require('./routes/post');
+const citaRoute = require('./routes/cita');
 
 app.use(bodyParser.json());
 
-app.use('/servicios', postRoute);
+app.use('/citas', citaRoute);
 
 app.get('/', (req, res) => {
     res.send('prueba 1 respuesta del servidor');
